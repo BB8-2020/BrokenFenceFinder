@@ -18,16 +18,8 @@ jobs:
         pip install .
     - name: Lint with flake8
       run: |
-        pip install flake8
-        pip install flake8-import-order
-        pip install flake8-blind-except
-        pip install flake8-builtins
-        pip install flake8-docstrings
-        pip install flake8-rst-docstrings
-        pip install flake8-logging-format 
         # stop the build if there are Python syntax errors or undefined names
-        flake8 . --ignore=D210,D100,D104,D401,D202,E202,E201,I201 --show-source --enable-extension=G --max-line-length=140 --max-complexity=7 --count
+        flake8 . --config="./setup.cfg"
     - name: Test with pytest
       run: |
-        pip install pytest
         pytest . -vs
