@@ -1,5 +1,5 @@
 def test_placeholder():
     """
-    Place holder test for pytest
+    Place holder test for pytest.
     """
     pass
