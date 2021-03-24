@@ -5,10 +5,10 @@ DEVELOPER = True
 install_requires = []
 
 if DEVELOPER:
-    with open('requirments-dev') as file:
+    with open('requirments-dev.txt') as file:
         install_requires.extend(file.read().splitlines())
 
-with open('requirments') as file:
+with open('requirments.txt') as file:
     install_requires.extend(file.read().splitlines())
 
 
