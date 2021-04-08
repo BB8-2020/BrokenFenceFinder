@@ -4,7 +4,7 @@ import os
 
 
 # Read the video from specified path
-cam = cv2.VideoCapture("C:\\Users\\Niels\\Documents\\HU\\Jaar2\\BlokC\\bb8\\Data\\test.mp4")
+cam = cv2.VideoCapture("C:\\Users\\Niels\\Documents\\HU\\Jaar2\\BlokC\\bb8\\Data\\P0140015.mp4")
 
 try:
     # creating a folder named data
@@ -18,14 +18,15 @@ except OSError:
 # frame
 currentframe = 0
 
-stepSize = 2000
+stepSize = 80
 
 while True:
+    # reading from frame
+    ret, frame = cam.read()
+
     if not (currentframe % stepSize == 0):
         currentframe += 1
         continue
-    # reading from frame
-    ret, frame = cam.read()
 
     if ret:
         # if video is still left continue creating images
