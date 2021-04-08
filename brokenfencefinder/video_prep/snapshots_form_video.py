@@ -1,3 +1,4 @@
+"""Module to quickly create some snapshots from a video."""
 import cv2
 import os
 
